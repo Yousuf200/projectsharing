@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Project Sharing Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="iconsbook.png" type="image/png">
+
+    <style>
+        /* Add background image and custom styles for the registration page */
+        body {
+            background-image: url('abc.gif'); /* Replace with your background image URL */
+            background-size: cover;
+            /* background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white; */
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the common navigation bar -->
+    <script src="common.js"></script>
+    
+    <section class="container">
+        <h2 class="text-light">My Projects</h2>
+        <br>
+        <!-- Add a section to dynamically display user's projects -->
+        <div class="row" >
+            <div style="font-style: oblique; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="projectsList">
+        </div>
+            
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="myproject.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const projectsList = document.getElementById("projectsList");
+            
+            // Loop through the projectsData array and create project entries
+            projectsData.forEach((project) => {
+                const projectEntry = document.createElement('div');
+                projectEntry.classList.add('project-entry');
+                // <div class='card bg-transparent border-bold border-secondary'>
+                projectEntry.innerHTML = `
+                    <br>
+                    <div class='card bg-transparent '>
+                    <font color="White">
+                    <h3>${project.title}</h3>
+                    <p >Description: ${project.description}</p>
+                    <button class="btn btn-dark" onclick="viewProject(${project.id})">View Project</button>
+                    </font>
+                    </div>
+                    <br>
+                `;
+                projectsList.appendChild(projectEntry);
+            });
+        });
+
+        // Function to view a project
+        function viewProject(projectId) {
+            // Here, you can implement logic to display the project details
+            // based on the projectId. You can use a modal or another
+            // method to display the project content dynamically.
+            // For example, you can fetch project content from a database or JSON file.
+            alert(`Viewing Project with ID: ${projectId}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Add your custom CSS styles here */
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding-bottom: 20px;
+}
+.thicker-border {
+    border-width: 3px; /* Adjust the thickness as needed */
+}
+/* styles.css */
+/* body {
+    animation: darkModeGradientAnimation 10s linear infinite;
+}
+
+@keyframes darkModeGradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #111, #333);
+    }
+    25% {
+        background: linear-gradient(45deg, #333, #555);
+    }
+    50% {
+        background: linear-gradient(45deg, #555, #111);
+    }
+    75% {
+        background: linear-gradient(45deg, #111, #333);
+    }
+    100% {
+        background: linear-gradient(45deg, #333, #555);
+    }
+} */
+
+
+
+/* Navigation Bar Styles */
+.navbar {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+/* Project Card Styles */
+.card {
+    border: none;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Footer Styles (if applicable) */
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
